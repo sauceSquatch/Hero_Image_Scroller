@@ -1,0 +1,19 @@
+@import "reset";
+@import "mixins";
+@import "vars";
+@import "icons";
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+body {
+  background-color: $BG_gray;
+  font-family: $bodyFont;
+  font-size: 1.4em;
+}
