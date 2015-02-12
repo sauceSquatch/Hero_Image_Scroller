@@ -16,4 +16,22 @@ body {
   background-color: $BG_gray;
   font-family: $bodyFont;
   font-size: 1.4em;
+
+  #hero_image_scroller {
+    margin: 0 auto;
+
+    .image_group {
+      position: relative;
+      width: 812px;
+      height: 529px;
+      overflow: hidden;
+      background-color: #000;
+
+      img {
+        position: absolute
+      }
+    }
+  }
 }
+
+
