@@ -98,20 +98,39 @@ body {
   background-color: #ececec;
   font-family: "Oxygen", sans-serif;
   font-size: 1.4em;
+  background-color: #333333;
 }
-/* line 20, ../main.scss */
+/* line 21, ../main.scss */
 body #hero_image_scroller {
+  position: relative;
   margin: 0 auto;
+  width: 812px;
+  height: 500px;
+  margin-top: 30px;
+  background-color: #000;
 }
-/* line 23, ../main.scss */
+/* line 29, ../main.scss */
+body #hero_image_scroller #loader_holder {
+  position: absolute;
+  z-index: 666;
+  right: 60px;
+  bottom: 60px;
+}
+/* line 35, ../main.scss */
+body #hero_image_scroller #loader_holder #loader {
+  position: absolute;
+  opacity: 0;
+}
+/* line 41, ../main.scss */
 body #hero_image_scroller .image_group {
   position: relative;
   width: 812px;
-  height: 529px;
+  height: 500px;
   overflow: hidden;
   background-color: #000;
+  display: none;
 }
-/* line 30, ../main.scss */
+/* line 49, ../main.scss */
 body #hero_image_scroller .image_group .gradient_fade {
   z-index: 15;
   position: absolute;
@@ -125,7 +144,7 @@ body #hero_image_scroller .image_group .gradient_fade {
   background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.65) 59%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 );
 }
-/* line 44, ../main.scss */
+/* line 63, ../main.scss */
 body #hero_image_scroller .image_group .fade {
   z-index: 20;
   position: absolute;
@@ -133,16 +152,20 @@ body #hero_image_scroller .image_group .fade {
   height: 100%;
   background-color: #000;
 }
-/* line 52, ../main.scss */
+/* line 71, ../main.scss */
 body #hero_image_scroller .image_group img {
   position: absolute;
+}
+/* line 75, ../main.scss */
+body #hero_image_scroller .image_group.active {
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */
 
 {
 "version": 3,
-"mappings": ";;;;;AAKA;;;;;;;;;;;;wBAYyB;EACvB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,SAAS,EAAE,IAAI;EACf,IAAI,EAAE,OAAO;EACb,cAAc,EAAE,QAAQ;;;;;AAG1B;0CAC2C;EACzC,OAAO,EAAE,KAAK;;;;AAEhB,IAAK;EACH,WAAW,EAAE,CAAC;;;;AAEhB,MAAO;EACL,UAAU,EAAE,IAAI;;;;AAElB,aAAc;EACZ,MAAM,EAAE,IAAI;;;;AAEd;iBACkB;EAChB,OAAO,EAAE,EAAE;EACX,OAAO,EAAE,IAAI;;;;AAEf,KAAM;EACJ,eAAe,EAAE,QAAQ;EACzB,cAAc,EAAE,CAAC;;;;;AC9CnB,KAAM;EACJ,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,CAAC;EACV,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,OAAO;;;;AAG3B,WAAY;EACV,UAAU,EAAE,wkGAAqD;EACjE,iBAAiB,EAAE,SAAS;;;;AAG9B,YAAa;EACX,UAAU,EAAE,6pDAAsD;EAClE,iBAAiB,EAAE,SAAS;;;;AAG9B,cAAe;EACb,UAAU,EAAE,28DAAwD;EACpE,iBAAiB,EAAE,SAAS;;;;AAG9B,YAAa;EACX,UAAU,EAAE,i2DAAsD;EAClE,iBAAiB,EAAE,SAAS;;;;ACX9B,IAAK;EACH,gBAAgB,ECfE,OAAO;EDgBzB,WAAW,ECVD,oBAAQ;EDWlB,SAAS,EAAE,KAAK;;;AAEhB,yBAAqB;EACnB,MAAM,EAAE,MAAM;;;AAEd,sCAAa;EACX,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,QAAQ,EAAE,MAAM;EAChB,gBAAgB,EAAE,IAAI;;;AAEtB,qDAAc;EACZ,OAAO,EAAE,EAAE;EACX,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,oFAAoF;EAChG,UAAU,EAAE,oIAAiI;EAC7I,UAAU,EAAE,uFAAsF;EAClG,UAAU,EAAE,kFAAiF;EAC7F,UAAU,EAAE,mFAAkF;EAC9F,UAAU,EAAE,2EAA0E;EACtF,MAAM,EAAE,+GAA+G;;;AAGzH,4CAAM;EACJ,OAAO,EAAE,EAAE;EACX,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,IAAI;;;AAGxB,0CAAI;EACF,QAAQ,EAAE,QAAQ",
+"mappings": ";;;;;AAKA;;;;;;;;;;;;wBAYyB;EACvB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,SAAS,EAAE,IAAI;EACf,IAAI,EAAE,OAAO;EACb,cAAc,EAAE,QAAQ;;;;;AAG1B;0CAC2C;EACzC,OAAO,EAAE,KAAK;;;;AAEhB,IAAK;EACH,WAAW,EAAE,CAAC;;;;AAEhB,MAAO;EACL,UAAU,EAAE,IAAI;;;;AAElB,aAAc;EACZ,MAAM,EAAE,IAAI;;;;AAEd;iBACkB;EAChB,OAAO,EAAE,EAAE;EACX,OAAO,EAAE,IAAI;;;;AAEf,KAAM;EACJ,eAAe,EAAE,QAAQ;EACzB,cAAc,EAAE,CAAC;;;;;AC9CnB,KAAM;EACJ,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,CAAC;EACV,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,OAAO;;;;AAG3B,WAAY;EACV,UAAU,EAAE,wkGAAqD;EACjE,iBAAiB,EAAE,SAAS;;;;AAG9B,YAAa;EACX,UAAU,EAAE,6pDAAsD;EAClE,iBAAiB,EAAE,SAAS;;;;AAG9B,cAAe;EACb,UAAU,EAAE,28DAAwD;EACpE,iBAAiB,EAAE,SAAS;;;;AAG9B,YAAa;EACX,UAAU,EAAE,i2DAAsD;EAClE,iBAAiB,EAAE,SAAS;;;;ACX9B,IAAK;EACH,gBAAgB,ECfE,OAAO;EDgBzB,WAAW,ECVD,oBAAQ;EDWlB,SAAS,EAAE,KAAK;EAChB,gBAAgB,EAAE,OAAO;;;AAEzB,yBAAqB;EACnB,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,MAAM;EACd,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,IAAI;EAChB,gBAAgB,EAAE,IAAI;;;AAEtB,wCAAc;EACZ,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,GAAG;EACZ,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;;;AAEZ,gDAAQ;EACN,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,CAAC;;;AAId,sCAAa;EACX,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,QAAQ,EAAE,MAAM;EAChB,gBAAgB,EAAE,IAAI;EACtB,OAAO,EAAE,IAAI;;;AAEb,qDAAc;EACZ,OAAO,EAAE,EAAE;EACX,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,oFAAoF;EAChG,UAAU,EAAE,oIAAiI;EAC7I,UAAU,EAAE,uFAAsF;EAClG,UAAU,EAAE,kFAAiF;EAC7F,UAAU,EAAE,mFAAkF;EAC9F,UAAU,EAAE,2EAA0E;EACtF,MAAM,EAAE,+GAA+G;;;AAGzH,4CAAM;EACJ,OAAO,EAAE,EAAE;EACX,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,IAAI;;;AAGxB,0CAAI;EACF,QAAQ,EAAE,QAAQ;;;AAGpB,6CAAS;EACP,OAAO,EAAE,KAAK",
 "sources": ["../_reset.scss","../_icons.scss","../main.scss","../_vars.scss"],
 "names": [],
 "file": "main.css"

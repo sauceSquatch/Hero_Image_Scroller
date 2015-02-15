@@ -16,16 +16,35 @@ body {
   background-color: $BG_gray;
   font-family: $bodyFont;
   font-size: 1.4em;
+  background-color: #333333;
 
   #hero_image_scroller {
+    position: relative;
     margin: 0 auto;
+    width: 812px;
+    height: 500px;
+    margin-top: 30px;
+    background-color: #000;
+
+    #loader_holder{
+      position: absolute;
+      z-index: 666;
+      right: 60px;
+      bottom: 60px;
+
+      #loader {
+        position: absolute;
+        opacity: 0;
+      }
+    }
 
     .image_group {
       position: relative;
       width: 812px;
-      height: 529px;
+      height: 500px;
       overflow: hidden;
       background-color: #000;
+      display: none;
 
       .gradient_fade{
         z-index: 15;
@@ -50,10 +69,15 @@ body {
       }
 
       img {
-        position: absolute
+        position: absolute;
+      }
+
+      &.active {
+        display: block;
       }
     }
   }
+
 }
 
 

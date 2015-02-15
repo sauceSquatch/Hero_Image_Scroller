@@ -5,17 +5,48 @@
   <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300|Oxygen:400,700,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <h2>Taco time!</h2>
-</body>
 <script type="text/javascript" src="js/script.js"></script>
 <!-- add port listening for gulp-livereload -->
 <div id="hero_image_scroller">
+  <div id="loader_holder">
+    <div id="loader">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 38 38" xml:space="preserve">
+          <circle id="loader_template" opacity="0.2" fill="none" stroke="#FFFFFF" stroke-miterlimit="1" stroke-width="5" cx="19" cy="19" r="15.845"/>
+          <circle id="loader_path" fill="none" stroke="#FFFFFF" opacity="0.7" stroke-miterlimit="10" stroke-width="5" cx="19" cy="19" r="15.845"/>
+      </svg>
+    </div>
+  </div>
   <div class="image_group active">
     <div class="fade"></div>
     <img class="bg" src="images/selects-2-bg.jpg"> 
     <img class="cutout" src="images/selects-2-cut.png">
     <div class="gradient_fade"></div>
   </div>
+  <div class="image_group">
+    <div class="fade"></div>
+    <img class="bg" src="images/selects-3-bg.jpg"> 
+    <img class="cutout" src="images/selects-3-cut.png">
+    <div class="gradient_fade"></div>
+  </div>
+  <div class="image_group">
+    <div class="fade"></div>
+    <img class="bg" src="images/selects-4-bg.jpg"> 
+    <img class="cutout" src="images/selects-4-cut.png">
+    <div class="gradient_fade"></div>
+  </div>
+  <div class="image_group">
+    <div class="fade"></div>
+    <img class="bg" src="images/selects-5-bg.jpg"> 
+    <img class="cutout" src="images/selects-5-cut.png">
+    <div class="gradient_fade"></div>
+  </div>
+  <div class="image_group">
+    <div class="fade"></div>
+    <img class="bg" src="images/selects-7-bg.jpg"> 
+    <img class="cutout" src="images/selects-7-cut.png">
+    <div class="gradient_fade"></div>
+  </div>
 </div>
+</body>
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </html>
